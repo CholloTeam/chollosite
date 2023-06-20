@@ -1,44 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Page</title>
-    <link href="../static/style.css" rel="stylesheet">
-    <link rel="shortcut icon" href="../static/media/logo.png" type="image/x-icon">
-</head>
-<body>
-    <header id="det-head">
-        <div id="logo">
-            <img src="../static/media/logo.png" alt="logo">
-        </div>
-        <div id="header-pages">
-            <ul class="header-ul">
-                <li><a href="product.html" class="header-page">Collection</a></li>
-                <li><a href="" class="header-page">Catalog</a></li>
-                <li><a href="" class="header-page">About Us</a></li>
-                <li><a href="" class="header-page">Blog</a></li>
-            </ul>
-        </div>
-        <div id="social-links" class="header-ul">
-            <a href="">
-                <img src="../static/media/icon/shopping-cart.svg" alt="Shopping cart icon" class="social-link">
-            </a>
-            <a href="">
-                <img src="../static/media/icon/search icon.svg" alt="Search icon" class="social-link">
-            </a>
-            <a href="">
-                <img src="../static/media/icon/avatar.svg" alt="Avatar icon" class="social-link">
-            </a>
-            <a href="">
-                <img src="../static/media/icon/favourites.svg" alt="Favourites icon" class="social-link">
-            </a>
-        </div>
-        <div id="mobile-menu">
-            <img src="../static/media/icon/2931181_lines_list_menu_checklist_navigation_icon - Copy - Copy (2) 1.svg" alt="Menu button" class="m-s-l">
-        </div>
-    </header>
+{% extends "chollo_main/base.html" %}
+
+{% load static %}
+
+{% block body %}
     <section id="nav-menu">
         <div id="div-nav-menu">
             Home / Categories / Clothing’s / Nnamdi Men’s Store / Men’s Shirt
@@ -48,14 +12,14 @@
         <div id="product-cont">
             <div id="product-image-cont">
                 <div id="product-image">
-                    <img src="../static/media/product-image/f559820c47c0279ebbd8321cff5e9101.png" alt="">
+                    <img src="{% static "chollo_main/media/product-image/f559820c47c0279ebbd8321cff5e9101.png" %}" alt="">
                 </div>
                 <div class="shadowbox"></div>
             </div>
             <div id="product-details">
                 <div id="reviews-div">
                     <div id="rew-rating">
-                        <img class="r-r-17" src="../static/media/icon/Star 5.svg" alt="rating icon">
+                        <img class="r-r-17" src="{% static "chollo_main/media/icon/Star 5.svg" %}" alt="rating icon">
                         <p class="t-o-5">4.5</p>
                     </div>
                     <p class="t-o-5">|</p>
@@ -71,13 +35,13 @@
                 </div>
                 <div id="quantity">
                     <div id="redu-quan" class="align-c">
-                        <img src="../static/media/icon/Vector 615.svg" alt="Reduce button">
+                        <img src="{% static "chollo_main/media/icon/Vector 615.svg" %}" alt="Reduce button">
                     </div>
                     <div id="quan-number">
                         <p id="qu-number">1</p>
                     </div>
                     <div id="incr-quan" class="align-c">
-                        <img src="../static/media/icon/plus icon.svg" alt="Add button">
+                        <img src="{% static "chollo_main/media/icon/plus icon.svg" %}" alt="Add button">
                     </div>
                 </div>
                 <div id="pro-butns">
@@ -104,7 +68,7 @@
         <div id="related-section">
             <div id="related-info">
                 <div class="vec">
-                    <img src="../static/media/icon/Vector 615.svg" alt="Line break">
+                    <img src="{% static "chollo_main/media/icon/Vector 615.svg" %}" alt="Line break">
                 </div>
                 <div class="txt">
                     Related Works
@@ -113,7 +77,7 @@
             <div id="related-items">
                 <div class="r-items">
                     <div class="r-item-img">
-                        <img class="r-img" src="../static/media/product-image/21f21eeca6accf7416fc2b27bae3450f (1).png" alt="">
+                        <img class="r-img" src="{% static "chollo_main/media/product-image/21f21eeca6accf7416fc2b27bae3450f (1).png" %}" alt="">
                         <div class="shadowbox"></div>
                     </div>
                     <div class="r-item-txt">
@@ -121,7 +85,7 @@
                         <div class="r-price">
                             <p>NGN 4,000</p>
                             <div class="r-price-rev">
-                                <img class="rpr-img" src="../static/media/icon/Star 5.svg" alt="">
+                                <img class="rpr-img" src="{% static "chollo_main/media/icon/Star 5.svg" %}" alt="">
                                 <p class="rpr-rating">4.2</p>
                             </div>
                         </div>
@@ -129,7 +93,7 @@
                 </div>
                 <div class="r-items">
                     <div class="r-item-img">
-                        <img class="r-img" src="../static/media/product-image/5fb8affd2c5d7c0ef4d52aec564efde7 (1).png" alt="">
+                        <img class="r-img" src="{% static "chollo_main/media/product-image/5fb8affd2c5d7c0ef4d52aec564efde7 (1).png" %}" alt="">
                         <div class="shadowbox"></div>
                     </div>
                     <div class="r-item-txt">
@@ -137,7 +101,7 @@
                         <div class="r-price">
                             <p>NGN 4,000</p>
                             <div class="r-price-rev">
-                                <img class="rpr-img" src="../static/media/icon/Star 5.svg" alt="">
+                                <img class="rpr-img" src="{% static "chollo_main/media/icon/Star 5.svg" %}" alt="">
                                 <p class="rpr-rating">4.5</p>
                             </div>
                         </div>
@@ -145,7 +109,7 @@
                 </div>
                 <div class="r-items">
                     <div class="r-item-img">
-                        <img class="r-img" src="../static/media/product-image/bab469d61797b42a259aaf3affa61130 1.png" alt="">
+                        <img class="r-img" src="{% static "chollo_main/media/product-image/bab469d61797b42a259aaf3affa61130 1.png" %}" alt="">
                         <div class="shadowbox"></div>
                     </div>
                     <div class="r-item-txt">
@@ -153,7 +117,7 @@
                         <div class="r-price">
                             <p>NGN 4,000</p>
                             <div class="r-price-rev">
-                                <img class="rpr-img" src="../static/media/icon/Star 5.svg" alt="">
+                                <img class="rpr-img" src="{% static "chollo_main/media/icon/Star 5.svg" %}" alt="">
                                 <p class="rpr-rating">4.4</p>
                             </div>
                         </div>
@@ -161,7 +125,7 @@
                 </div>
                 <div class="r-items">
                     <div class="r-item-img">
-                        <img class="r-img" src="../static/media/product-image/f559820c47c0279ebbd8321cff5e9101.png" alt="">
+                        <img class="r-img" src="{% static "chollo_main/media/product-image/f559820c47c0279ebbd8321cff5e9101.png" %}" alt="">
                         <div class="shadowbox"></div>
                     </div>
                     <div class="r-item-txt">
@@ -169,7 +133,7 @@
                         <div class="r-price">
                             <p>NGN 4,000</p>
                             <div class="r-price-rev">
-                                <img class="rpr-img" src="../static/media/icon/Star 5.svg" alt="">
+                                <img class="rpr-img" src="{% static "chollo_main/media/icon/Star 5.svg" %}" alt="">
                                 <p class="rpr-rating">4.2</p>
                             </div>
                         </div>
@@ -178,53 +142,6 @@
             </div>
         </div>
     </section>
-    <section id="newsletter">
-        <div id="newsletter-text">
-            <h2 id="nsl-heading">Join Our Newsletter</h2>
-            <span id="nsl-p">Subscribe Now! for free and save 10% on your first purchase</span>
-        </div>
-        <div id="form-intake">
-            <form action="mailto:info@chollo.com" method="post">
-                <input type="email" placeholder="Enter your Email Address" id="emailfield"/>
-                <input type="submit" value="Send" id="sendbutton">
-            </form>
-        </div>
-    </section>
-    <footer>
-        <div id="footer-docl">
-            <div class="footer-link-con">
-                <ul class="footer-links">
-                    <li><a href="" class="footer-link">Collection</a></li>
-                    <li><a href="" class="footer-link">Catalog</a></li>
-                    <li><a href="" class="footer-link">About Us</a></li>
-                    <li><a href="" class="footer-link">Blog</a></li>
-                </ul>
-            </div>
-            <div id="footer-social">
-                <a href="" class="soc-icon">
-                    <img src="../static/media/icon/bx-envelope.svg" alt="Email icon">
-                </a>
-                <a href="" class="soc-icon mobile-mvd">
-                    <img src="../static/media/icon/bxl-facebook.svg" alt="Facebook icon">
-                </a>
-                <a href="" class="soc-icon">
-                    <img src="../static/media/icon/bxl-instagram.svg" alt="Instagram icon">
-                </a>
-                <a href="" class="soc-icon mobile-mvd">
-                    <img src="../static/media/icon/bxs-phone.svg" alt="Phone icon">
-                </a>
-                <a href="" class="soc-icon">
-                    <img src="../static/media/icon/bxl-twitter.svg" alt="Twitter icon">
-                </a>
-            </div>
-        </div>
-        <hr id="top-line">
-        <div id="footer-docs">
-            <a href="">CUSTOMERS SERVICE AND TERMS</a>
-            <a href="">MATERIALS & CARE</a>
-            <a href="">PRIVACY POLICY</a>
-        </div>
-        <hr id="bottom-line">
-    </footer>
-</body>
-</html>
+
+
+{% endblock %}

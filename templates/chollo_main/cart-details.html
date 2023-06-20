@@ -1,0 +1,164 @@
+{% extends "chollo_main/base.html" %}
+{% load static %}
+
+
+{% block body %}
+
+    <section id="nav-menu">
+        <div id="div-nav-menu">
+            Home / Categories / Clothing’s / Nnamdi Men’s Store / Men’s Shirt
+        </div>
+    </section>
+    <section>
+        <div id="loc-pay">
+            <div id="locdiv" class="white">
+                <img id="loc-icon" src="{% static "chollo_main/media/icon/heroicons-outline/location-icon.png" %}" alt="location icon">
+                <form class="locpay-form" action="mailto:info@chollo.com" method="post">
+                    <input type="email" placeholder="Enter delivery location" id="sel-location"/>
+                </form>
+            </div>
+            <div id="paydiv" class="white">
+                <img id="pay-icon" src="{% static "chollo_main/media/icon/heroicons-outline/payment-options.png" %}" alt="">
+                <form class="locpay-form" action="mailto:info@chollo.com" method="post">
+                    <input type="email" placeholder="Select payment method" id="payment-provider"/>
+                </form>
+                <img id="dropdown" src="{% static "chollo_main/media/icon/Vector 335dropdown.svg" %}" alt="">
+            </div>
+        </div>
+        <div class="white batch-two">
+            <div class="batch-two-prod">
+                <div class="bt-one">
+                    <img class="bt-o-img" src="{% static "chollo_main/media/icon/heroicons-outline/store-icon.svg" %}" alt="">
+                    <p class="bt-one-txt">
+                        <span>Nnamdi's</span> Men Store
+                    </p>
+                    <img class="bt-o-clp" src="{% static "chollo_main/media/icon/heroicons-outline/clipboard.svg" %}" alt="">
+                </div>
+                <div class="bt-two">
+                    <img class="bt-two-img" src="{% static "chollo_main/media/product-image/shirt" %}" alt="">
+                    <div class="bt-two-txtgrp">
+                        <div class="bt-two-title">
+                            <p class="product-name">men jacket shirt</p>
+                        </div>
+                        <p class="bt-two-price">NGN 12,000</p>
+                    </div>
+                    <div class="c-quantity">
+                        <div class="align-c redu-quan">
+                            <img src="{% static "chollo_main/media/icon/Vector 615.svg" %}" alt="Reduce button">
+                        </div>
+                        <div class="quan-number">
+                            <p class="qu-number">1</p>
+                        </div>
+                        <div class="align-c incr-quan">
+                            <img src="{% static "chollo_main/media/icon/plus icon.svg" %}" alt="Add button">
+                        </div>
+                    </div>
+                </div>
+                <div class="bt-three">
+                    <div class="bt-three-one">
+                        <p><span class="black">Delivery: </span><span>Free Delivery</span></p>
+                        <p><span class="black">Estimated Delivery: </span><span>after 24 hours</span></p>
+                    </div>
+                    <div class="bt-three-two">
+                        <img src="{% static "chollo_main/media/icon/heroicons-outline/favourites shaded.svg" %}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="batch-two-prod">
+                <div class="bt-one">
+                    <img class="bt-o-img" src="{% static "chollo_main/media/icon/heroicons-outline/store-icon.svg" %}" alt="">
+                    <p class="bt-one-txt">
+                        <span>Ken's</span> IT Store
+                    </p>
+                    <img class="bt-o-clp" src="{% static "chollo_main/media/icon/heroicons-outline/clipboard.svg" %}" alt="">
+                </div>
+                <div class="bt-two">
+                    <img class="bt-two-img" src="{% static "chollo_main/media/product-image/airpods.png" %}" alt="">
+                    <div class="bt-two-txtgrp">
+                        <div class="bt-two-title">
+                            <p class="product-name">air pods</p>
+                        </div>
+                        <p class="bt-two-price">NGN 24,000</p>
+                    </div>
+                    <div class="c-quantity">
+                        <div class="align-c redu-quan">
+                            <img src="{% static "chollo_main/media/icon/Vector 615.svg" %}" alt="Reduce button">
+                        </div>
+                        <div class="quan-number">
+                            <p class="qu-number">1</p>
+                        </div>
+                        <div class="align-c incr-quan">
+                            <img src="{% static "chollo_main/media/icon/plus icon.svg" %}" alt="Add button">
+                        </div>
+                    </div>
+                </div>
+                <div class="bt-three">
+                    <div class="bt-three-one">
+                        <p><span class="black">Delivery: </span><span>Free Delivery</span></p>
+                        <p><span class="black">Estimated Delivery: </span><span>after 24 hours</span></p>
+                    </div>
+                    <div class="bt-three-two">
+                        <img src="{% static "chollo_main/media/icon/heroicons-outline/favourites shaded.svg" %}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="batch-two-prod">
+                <div class="bt-one">
+                    <img class="bt-o-img" src="{% static "chollo_main/media/icon/heroicons-outline/store-icon.svg" %}" alt="">
+                    <p class="bt-one-txt">
+                        <span>Nnamdi's</span> Men Store
+                    </p>
+                    <img class="bt-o-clp" src="{% static "chollo_main/media/icon/heroicons-outline/clipboard.svg" %}" alt="">
+                </div>
+                <div class="bt-two">
+                    <img class="bt-two-img" src="{% static "chollo_main/media/product-image/f559820c47c0279ebbd8321cff5e9101.png" %}" alt="">
+                    <div class="bt-two-txtgrp">
+                        <div class="bt-two-title">
+                            <p class="product-name">men jacket shirt</p>
+                        </div>
+                        <p class="bt-two-price">NGN 12,000</p>
+                    </div>
+                    <div class="c-quantity">
+                        <div class="align-c redu-quan">
+                            <img src="{% static "chollo_main/media/icon/Vector 615.svg" %}" alt="Reduce button">
+                        </div>
+                        <div class="quan-number">
+                            <p class="qu-number">3</p>
+                        </div>
+                        <div class="align-c incr-quan">
+                            <img src="{% static "chollo_main/media/icon/plus icon.svg" %}" alt="Add button">
+                        </div>
+                    </div>
+                </div>
+                <div class="bt-three">
+                    <div class="bt-three-one">
+                        <p><span class="black">Delivery: </span><span>Free Delivery</span></p>
+                        <p><span class="black">Estimated Delivery: </span><span>after 24 hours</span></p>
+                    </div>
+                    <div class="bt-three-two">
+                        <img src="{% static "chollo_main/media/icon/heroicons-outline/favourites shaded.svg" %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="batch-three">
+            <div id="summarydiv" class="white">
+                <div id="sumtext">Summary</div>
+                <div id="sump">
+                    <p id="ticsmbx1" class="sump50">Total items cost</p>
+                    <p id="ticsmbx2" class="sump50">Total shipping</p>
+                    <p id="ticsmbx3">NGN 12,000</p>
+                    <p id="ticsmbx4">Free</p>
+                </div>
+            </div>
+            <div id="summarybox" class="white">
+                <p class="summbox32">Total</p>
+                <h2 class="summbox32">NGN 12,000</h2>
+            </div>
+            <div class="white" id="m-white">
+                <button id="buy-now" class="btn place-o">Place Order</button>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

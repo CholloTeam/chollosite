@@ -1,45 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign up | Chollo</title>
-    <link rel="stylesheet" href="../static/style.css">
-    <script src="../static/script.js"></script>
-    <link rel="shortcut icon" href="../static/media/logo.png" type="image/x-icon">
-</head>
-<body>
-    <header>
-        <div id="logo">
-            <img src="../static/media/logo.png" alt="logo">
-        </div>
-        <div id="header-pages">
-            <ul class="header-ul">
-                <li><a href="product.html" class="header-page">Collection</a></li>
-                <li><a href="" class="header-page">Catalog</a></li>
-                <li><a href="" class="header-page">About Us</a></li>
-                <li><a href="" class="header-page">Blog</a></li>
-            </ul>
-        </div>
-        <div id="social-links" class="header-ul">
-            <a href="">
-                <img src="../static/media/icon/shopping-cart.svg" alt="Shopping cart icon" class="social-link">
-            </a>
-            <a href="">
-                <img src="../static/media/icon/search icon.svg" alt="Search icon" class="social-link">
-            </a>
-            <a href="">
-                <img src="../static/media/icon/avatar.svg" alt="Avatar icon" class="social-link">
-            </a>
-            <a href="">
-                <img src="../static/media/icon/favourites.svg" alt="Favourites icon" class="social-link">
-            </a>
-        </div>
-        <div id="mobile-menu">
-            <img src="../static/media/icon/2931181_lines_list_menu_checklist_navigation_icon - Copy - Copy (2) 1.svg" alt="Menu button" class="m-s-l">
-        </div>
-    </header>
+{% extends "chollo_main/base.html" %}
+
+{% load static %}
+
+{% block body %}
     <main id="s-main-cont">
         <section id="incre-me">
             <section id="s-n-img-cont">
@@ -68,6 +31,9 @@
             </section>
         </section>
     </main>
+{% endblock %}
+
+
     <footer id="f-mobile-visible">
         <div id="footer-docl">
             <div class="footer-link-con">
@@ -80,19 +46,19 @@
             </div>
             <div id="footer-social">
                 <a href="" class="soc-icon">
-                    <img src="../static/media/icon/bx-envelope.svg" alt="Email icon">
+                    <img src="{% static "chollo_main/media/icon/bx-envelope.svg" %}" alt="Email icon">
                 </a>
                 <a href="" class="soc-icon mobile-mvd">
-                    <img src="../static/media/icon/bxl-facebook.svg" alt="Facebook icon">
+                    <img src="{% static "chollo_main/media/icon/bxl-facebook.svg" %}" alt="Facebook icon">
                 </a>
                 <a href="" class="soc-icon">
-                    <img src="../static/media/icon/bxl-instagram.svg" alt="Instagram icon">
+                    <img src="{% static "chollo_main/media/icon/bxl-instagram.svg" %}" alt="Instagram icon">
                 </a>
                 <a href="" class="soc-icon mobile-mvd">
-                    <img src="../static/media/icon/bxs-phone.svg" alt="Phone icon">
+                    <img src="{% static "chollo_main/media/icon/bxs-phone.svg" %}" alt="Phone icon">
                 </a>
                 <a href="" class="soc-icon">
-                    <img src="../static/media/icon/bxl-twitter.svg" alt="Twitter icon">
+                    <img src="{% static "chollo_main/media/icon/bxl-twitter.svg" %}" alt="Twitter icon">
                 </a>
             </div>
         </div>
@@ -104,5 +70,9 @@
         </div>
         <hr id="bottom-line">
     </footer>
+
+{% block foot %}
+{% endblock %}
+
 </body>
 </html>

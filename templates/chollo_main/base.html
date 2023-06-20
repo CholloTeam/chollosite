@@ -1,0 +1,105 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link href="{% static "chollo_main/style.css" %}" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static "chollo_main/media/logo.png" %}" type="image/x-icon">
+</head>
+<body>
+    <header id="det-head">
+        <div id="logo">
+
+            <a href="{% url "chollo_main:home" %}" class="header-page">
+                <img src="{% static "chollo_main/media/logo.png" %}" alt="logo">
+            </a>
+
+        </div>
+        <div id="header-pages">
+            <ul class="header-ul">
+                <li><a href="{% url "chollo_main:product" %}" class="header-page">Collection</a></li>
+                <li><a href="" class="header-page">Catalog</a></li>
+                <li><a href="" class="header-page">About Us</a></li>
+                <li><a href="" class="header-page">Blog</a></li>
+            </ul>
+        </div>
+        <div id="social-links" class="header-ul">
+            <a href="{% url "chollo_main:cart_details" %}">
+                <img src="{% static "chollo_main/media/icon/shopping-cart.svg" %}" alt="Shopping cart icon" class="social-link">
+            </a>
+            <a href="">
+                <img src="{% static "chollo_main/media/icon/search icon.svg" %}" alt="Search icon" class="social-link">
+            </a>
+            <a href="{% url "chollo_main:signup" %}">
+                <img src="{% static "chollo_main/media/icon/avatar.svg" %}" alt="Avatar icon" class="social-link">
+            </a>
+            <a href="">
+                <img src="{% static "chollo_main/media/icon/favourites.svg" %}" alt="Favourites icon" class="social-link">
+            </a>
+        </div>
+        <div id="mobile-menu">
+            <img src="{% static "chollo_main/media/icon/2931181_lines_list_menu_checklist_navigation_icon - Copy - Copy (2) 1.svg" %}" alt="Menu button" class="m-s-l">
+        </div>
+    </header>
+
+{% block body %}
+
+{% endblock %}
+
+{%  block foot %}
+    <section id="newsletter">
+        <div id="newsletter-text">
+            <h2 id="nsl-heading">Join Our Newsletter</h2>
+            <span id="nsl-p">Subscribe Now! for free and save 10% on your first purchase</span>
+        </div>
+        <div id="form-intake">
+            <form action="mailto:info@chollo.com" method="post">
+                <input type="email" placeholder="Enter your Email Address" id="emailfield"/>
+                <input type="submit" value="Send" id="sendbutton">
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div id="footer-docl">
+            <div class="footer-link-con">
+                <ul class="footer-links">
+                    <li><a href="" class="footer-link">Collection</a></li>
+                    <li><a href="" class="footer-link">Catalog</a></li>
+                    <li><a href="" class="footer-link">About Us</a></li>
+                    <li><a href="" class="footer-link">Blog</a></li>
+                </ul>
+            </div>
+            <div id="footer-social">
+                <a href="" class="soc-icon">
+                    <img src="{% static "chollo_main/media/icon/bx-envelope.svg" %}" alt="Email icon">
+                </a>
+                <a href="" class="soc-icon mobile-mvd">
+                    <img src="{% static "chollo_main/media/icon/bxl-facebook.svg" %}" alt="Facebook icon">
+                </a>
+                <a href="" class="soc-icon">
+                    <img src="{% static "chollo_main/media/icon/bxl-instagram.svg" %}" alt="Instagram icon">
+                </a>
+                <a href="" class="soc-icon mobile-mvd">
+                    <img src="{% static "chollo_main/media/icon/bxs-phone.svg" %}" alt="Phone icon">
+                </a>
+                <a href="" class="soc-icon">
+                    <img src="{% static "chollo_main/media/icon/bxl-twitter.svg" %}" alt="Twitter icon">
+                </a>
+            </div>
+        </div>
+        <hr id="top-line">
+        <div id="footer-docs">
+            <a href="">CUSTOMERS SERVICE AND TERMS</a>
+            <a href="">MATERIALS & CARE</a>
+            <a href="">PRIVACY POLICY</a>
+        </div>
+        <hr id="bottom-line">
+    </footer>
+{% endblock %}
+</body>
+</html>
+
