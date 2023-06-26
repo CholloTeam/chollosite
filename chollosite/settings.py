@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'chollo_main.apps.CholloMainConfig',
+    'chollo_cart.apps.CholloCartConfig',
+    'orders.apps.OrderConfig',
 ]
 
 MIDDLEWARE = [
@@ -64,6 +66,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'chollo_cart.context_processors.cart'
             ],
         },
     },
@@ -101,6 +104,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+CART_SESSION_ID = 'cart'
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/

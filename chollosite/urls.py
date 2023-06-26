@@ -16,11 +16,26 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('chollo_cart', include('chollo_cart.urls', namespace='chollo_cart')),
+    path('orders', include('orders.urls', namespace='orders')),
     path('chollo_main/', include('chollo_main.urls', namespace='chollo_main'))
 ]
 
+# Make sure that you include this URL pattern before the shop.urls pattern, since it’s more restrictive
+# than the latter.
+
 # "namespace: app url name" = the url to use
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)
+
+# In Production environment, Never serve static files with Django.
+# You'll do it in going live
 

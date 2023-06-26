@@ -21,7 +21,7 @@
         </div>
         <div id="header-pages">
             <ul class="header-ul">
-                <li><a href="{% url "chollo_main:product" %}" class="header-page">Collection</a></li>
+                <li><a href="{% url "chollo_main:product_list" %}" class="header-page">Collection</a></li>
                 <li><a href="" class="header-page">Catalog</a></li>
                 <li><a href="" class="header-page">About Us</a></li>
                 <li><a href="" class="header-page">Blog</a></li>
@@ -103,3 +103,26 @@
 </body>
 </html>
 
+
+
+
+{##}
+{#<div class="cart">#}
+{#{% with total_items=cart|length %}#}
+{#{% if total_items > 0 %}#}
+{#Your cart:#}
+{#<a href="{% url "cart:cart_detail" %}">#}
+{#{{ total_items }} item{{ total_items|pluralize }},#}
+{#${{ cart.get_total_price }}#}
+{#</a>#}
+{#{% else %}#}
+{#Your cart is empty.#}
+{#{% endif %}#}
+{#{% endwith %}#}
+{#</div>#}
+
+
+{##}
+{#<div class="cart">#}
+{#Your cart is empty.#}
+{#</div>#}

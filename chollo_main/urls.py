@@ -7,9 +7,12 @@ app_name = 'chollo_main'
 urlpatterns = [
     # views
     path("", views.home, name='home'),
-    path("product/", views.product, name='product'),
+    path("product_list/", views.product_list, name='product_list'),
+    path("product_list/<int:id>/<slug:slug>", views.product_list, name='product_list_by_category'),
+    path("product_detail/<int:id>/<slug:slug>", views.product_details, name='product_details'),
     path("signin/", views.signin, name='signin'),
     path("signup/", views.signup, name='signup'),
     path("cart_details/", views.cart_details, name='cart_details'),
 
 ]
+

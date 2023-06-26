@@ -1,5 +1,5 @@
 {% extends "chollo_main/base.html" %}
-
+ 
 {% load static %}
 
 {% block body %}
@@ -30,9 +30,22 @@
                 <div id="product-name">
                     <p id="prod-name">men jacket shirt</p>
                 </div>
+
+
+
+
                 <div id="produ-pric">
                     <p id="prod-price">NGN 12,000</p>
+                    <form action="{% url 'chollo_cart:add_to_cart' product_id %}" method="post">
+                        {{ cart_product_form }}
+                        {% csrf_token %}
+                        <input type="submit" value="Add to cart">
+                    </form>
                 </div>
+
+
+
+
                 <div id="quantity">
                     <div id="redu-quan" class="align-c">
                         <img src="{% static "chollo_main/media/icon/Vector 615.svg" %}" alt="Reduce button">
