@@ -77,6 +77,9 @@
             </div>
         </div>
     </section>
+
+
+
     <section id="shop-by-categories">
         <div id="sbc-details">
             <div id="sbcd-txt">
@@ -86,36 +89,21 @@
             <p id="sbcd-view-more">View More</p>
         </div>
         <div id="sbc-grid">
-            <div id="sbcg-grp-1">
+        {% for product in random_products %}
+           <a href="{{ product.category.get_absolute_url }}">
+{#           <a href="{% url 'product_list'  %}">#}
+            <div id="sbcg-grp">
                 <div class="sbc-prod sbc-card">
-                    <img src="{% static "chollo_main/media/product-image/headphones.png" %}" alt="" class="sbc-grid-img">
-                    <p class="sbc-grid-txt">Headphones</p>
-                </div>
-                <div class="sbc-prod sbc-card">
-                    <img src="{% static "chollo_main/media/product-image/macbook.png" %}" alt="" class="sbc-grid-img">
-                    <p class="sbc-grid-txt">Laptops</p>
-                </div>
-            </div>
-            <div id="sbcg-grp-2">
-                <div class="sbc-prod sbc-card">
-                    <img src="{% static "chollo_main/media/product-image/nikekicks.png" %}" alt="" class="sbc-grid-img">
-                    <p class="sbc-grid-txt">Shoes</p>
-                </div>
-                <div class="sbc-prod sbc-card">
-                    <img src="{% static "chollo_main/media/product-image/bab469d61797b42a259aaf3affa61130 1.png" %}" alt="" class="sbc-grid-img">
-                    <p class="sbc-grid-txt">Clothes</p>
+                    <img src="{{product.image.url}}" alt="" class="sbc-grid-img">
+                    <p class="sbc-grid-txt">{{ product.category.name }}</p>
                 </div>
             </div>
-            <div id="beauty-picks-grp" class="sbc-card sbc-prod">
-                <img src="{% static "chollo_main/media/product-image/beautypicks.png" %}" alt="Green flowers" class="sbc-grid-img">
-                <p class="sbc-grid-txt">Beauty Picks</p>
-            </div>
-            <div id="handbags" class="sbc-card sbc-prod">
-                <img src="{% static "chollo_main/media/product-image/handbag.png" %}" alt="Handbag" class="sbc-grid-img">
-                <p class="sbc-grid-txt">Handbags</p>
-            </div>
+           </a>
+        {% endfor %}
         </div>
     </section>
+
+
     <section id="dealsoftheday">
         <div id="doddetail">
             <div class="sbcline"></div>
