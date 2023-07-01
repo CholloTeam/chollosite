@@ -25,6 +25,11 @@
                 <img id="dropdown" src="{% static "chollo_main/media/icon/Vector 335dropdown.svg" %}" alt="">
             </div>
         </div>
+
+
+    {% for item in cart %}
+        {% with product=item.product %}
+
         <div class="white batch-two">
             <div class="batch-two-prod">
                 <div class="bt-one">
@@ -34,13 +39,14 @@
                     </p>
                     <img class="bt-o-clp" src="{% static "chollo_main/media/icon/heroicons-outline/clipboard.svg" %}" alt="">
                 </div>
+
                 <div class="bt-two">
-                    <img class="bt-two-img" src="{% static "chollo_main/media/product-image/shirt" %}" alt="">
+                    <img class="bt-two-img" src="{{ product.image.url }}" alt="">
                     <div class="bt-two-txtgrp">
                         <div class="bt-two-title">
-                            <p class="product-name">men jacket shirt</p>
+                            <p class="product-name">{{ product.name }}</p>
                         </div>
-                        <p class="bt-two-price">NGN 12,000</p>
+                        <p class="bt-two-price">NGN {{ product.price }}</p>
                     </div>
                     <div class="c-quantity">
                         <div class="align-c redu-quan">
@@ -48,82 +54,6 @@
                         </div>
                         <div class="quan-number">
                             <p class="qu-number">1</p>
-                        </div>
-                        <div class="align-c incr-quan">
-                            <img src="{% static "chollo_main/media/icon/plus icon.svg" %}" alt="Add button">
-                        </div>
-                    </div>
-                </div>
-                <div class="bt-three">
-                    <div class="bt-three-one">
-                        <p><span class="black">Delivery: </span><span>Free Delivery</span></p>
-                        <p><span class="black">Estimated Delivery: </span><span>after 24 hours</span></p>
-                    </div>
-                    <div class="bt-three-two">
-                        <img src="{% static "chollo_main/media/icon/heroicons-outline/favourites shaded.svg" %}" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="batch-two-prod">
-                <div class="bt-one">
-                    <img class="bt-o-img" src="{% static "chollo_main/media/icon/heroicons-outline/store-icon.svg" %}" alt="">
-                    <p class="bt-one-txt">
-                        <span>Ken's</span> IT Store
-                    </p>
-                    <img class="bt-o-clp" src="{% static "chollo_main/media/icon/heroicons-outline/clipboard.svg" %}" alt="">
-                </div>
-                <div class="bt-two">
-                    <img class="bt-two-img" src="{% static "chollo_main/media/product-image/airpods.png" %}" alt="">
-                    <div class="bt-two-txtgrp">
-                        <div class="bt-two-title">
-                            <p class="product-name">air pods</p>
-                        </div>
-                        <p class="bt-two-price">NGN 24,000</p>
-                    </div>
-                    <div class="c-quantity">
-                        <div class="align-c redu-quan">
-                            <img src="{% static "chollo_main/media/icon/Vector 615.svg" %}" alt="Reduce button">
-                        </div>
-                        <div class="quan-number">
-                            <p class="qu-number">1</p>
-                        </div>
-                        <div class="align-c incr-quan">
-                            <img src="{% static "chollo_main/media/icon/plus icon.svg" %}" alt="Add button">
-                        </div>
-                    </div>
-                </div>
-                <div class="bt-three">
-                    <div class="bt-three-one">
-                        <p><span class="black">Delivery: </span><span>Free Delivery</span></p>
-                        <p><span class="black">Estimated Delivery: </span><span>after 24 hours</span></p>
-                    </div>
-                    <div class="bt-three-two">
-                        <img src="{% static "chollo_main/media/icon/heroicons-outline/favourites shaded.svg" %}" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="batch-two-prod">
-                <div class="bt-one">
-                    <img class="bt-o-img" src="{% static "chollo_main/media/icon/heroicons-outline/store-icon.svg" %}" alt="">
-                    <p class="bt-one-txt">
-                        <span>Nnamdi's</span> Men Store
-                    </p>
-                    <img class="bt-o-clp" src="{% static "chollo_main/media/icon/heroicons-outline/clipboard.svg" %}" alt="">
-                </div>
-                <div class="bt-two">
-                    <img class="bt-two-img" src="{% static "chollo_main/media/product-image/f559820c47c0279ebbd8321cff5e9101.png" %}" alt="">
-                    <div class="bt-two-txtgrp">
-                        <div class="bt-two-title">
-                            <p class="product-name">men jacket shirt</p>
-                        </div>
-                        <p class="bt-two-price">NGN 12,000</p>
-                    </div>
-                    <div class="c-quantity">
-                        <div class="align-c redu-quan">
-                            <img src="{% static "chollo_main/media/icon/Vector 615.svg" %}" alt="Reduce button">
-                        </div>
-                        <div class="quan-number">
-                            <p class="qu-number">3</p>
                         </div>
                         <div class="align-c incr-quan">
                             <img src="{% static "chollo_main/media/icon/plus icon.svg" %}" alt="Add button">
@@ -141,6 +71,12 @@
                 </div>
             </div>
         </div>
+
+            {% endwith %}
+        {% endfor %}
+
+
+
         <div id="batch-three">
             <div id="summarydiv" class="white">
                 <div id="sumtext">Summary</div>

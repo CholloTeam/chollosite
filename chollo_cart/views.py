@@ -11,14 +11,14 @@ from chollo_main.models import Product
 @require_POST
 def add_to_cart(request, product_id):
     cart = Cart(request)
-    product = get_object_or_404(Product, product_id)
+    product = get_object_or_404(Product, id=product_id)
     form = CartAddProductForm(request.POST)
     if form.is_valid():
         clean_data = form.cleaned_data
         cart.add(product=product,
-                 quantity=clean_data['quantitiy'],
+                 quantity=clean_data['quantity'],
                  overide_quantity=clean_data['override'])
-        return redirect('cart:cart_detail')
+        return redirect('chollo_cart:cart_detail')
 
 
 @require_POST
@@ -26,7 +26,7 @@ def remove_from_cart(request, product_id):
     cart = Cart(request)
     product = get_object_or_404(Product, product_id)
     cart.remove(product)
-    return redirect('cart:cart_detail')
+    return redirect('chollo_cart:cart_detail')
 
 
 def cart_detail(request):

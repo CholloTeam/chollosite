@@ -22,7 +22,7 @@
         <div id="lpc-lph1-cont">
             <div id="lpc-lph1">
                 <h1 id="lph1">Bringing the market <span style="color: var(--orange); font-size: 64px;">closer</span> to you</h1>
-                <button id="lpcbtn" class="btn">SHOP NOW</button>
+                <a href="{% url 'chollo_main:product_list' %}"> <button id="lpcbtn" class="btn"> SHOP NOW </button> </a>
             </div>
         </div>
         <div id="lpc-navbutton-cont"> 
@@ -79,7 +79,6 @@
     </section>
 
 
-
     <section id="shop-by-categories">
         <div id="sbc-details">
             <div id="sbcd-txt">
@@ -91,7 +90,6 @@
         <div id="sbc-grid">
         {% for product in random_products %}
            <a href="{{ product.category.get_absolute_url }}">
-{#           <a href="{% url 'product_list'  %}">#}
             <div id="sbcg-grp">
                 <div class="sbc-prod sbc-card">
                     <img src="{{product.image.url}}" alt="" class="sbc-grid-img">
@@ -200,7 +198,7 @@
                 <button id="lpcbtn" class="btn">EXPLORE NOW!</button>
             </div>
             <div id="sugg-2nd-cont">
-                <img src="{% static "chollo_main/media/SAVE_20230525_083734.png" %}" alt="Chollo promotional flyer">
+                <a href="{% url 'chollo_main:product_list' %}"> <img src="{% static "chollo_main/media/SAVE_20230525_083734.png" %}" alt="Chollo promotional flyer"></a>
             </div>
             <div id="sugg-3rd-cont">
                 <div id="sugg-3con-details">

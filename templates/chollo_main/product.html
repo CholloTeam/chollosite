@@ -32,17 +32,14 @@
                 </div>
 
 
-
-
                 <div id="produ-pric">
                     <p id="prod-price">NGN 12,000</p>
-                    <form action="{% url 'chollo_cart:add_to_cart' product_id %}" method="post">
+                    <form action="{% url 'chollo_cart:add_to_cart' product.id %}" method="post">
                         {{ cart_product_form }}
                         {% csrf_token %}
                         <input type="submit" value="Add to cart">
                     </form>
                 </div>
-
 
 
 
@@ -74,7 +71,7 @@
             <div id="descrev-cont">
                 <div id="reviews"></div>
                 <div id="desc-text">
-                    <p>This Men Shirt is a two-in-one shirt that consists of the Jacket and a t-shirt made of cotton fiber mixed with wool. This Jacket  located in Nsukka under the Merchant Nnamdi Men’s Store. It consist of Brown and Milky White as the major colors. This Men Shirt is a two-in-one shirt that consists of the Jacket and a t-shirt made of cotton fiber mixed with wool. This Jacket  located in Nsukka under the Merchant Nnamdi Men’s Store. It consist of Brown and Milky White as the major colors. This Men Shirt is a two-in-one shirt that consists of the Jacket and a t-shirt made of cotton fiber mixed with wool. This Jacket  located in Nsukka under the Merchant Nnamdi Men’s Store. It consist of Brown and Milky White as the major colors.</p>
+                    <p>{{ product.description }}</p>
                 </div>
             </div>
         </div>

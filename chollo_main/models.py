@@ -21,10 +21,9 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
-    def get_absolute_part(self):
+    def get_absolute_url(self):
         return reverse('chollo_main:product_list_by_category',
                        args=[self.slug])
-
 
 
 # Crating model for the Categories
@@ -50,6 +49,7 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
-    def get_absolute_part(self):
+    def get_absolute_url(self):
         return reverse('chollo_main:product_detail',
-                       args=[self.slug])
+                       args=[self.id, self.slug])
+
