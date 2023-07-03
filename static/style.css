@@ -1587,3 +1587,34 @@ footer {
     color: #ef2d2d;
     text-transform: uppercase;
 }
+
+/* Confirmation page */
+#confirmation-container {
+    width: 100svw;
+    display: flex;
+    flex-direction: column;
+    gap: 67px;
+    align-items: center;
+    padding: 55px 0px;
+    #confirmation-div {
+        display: flex;
+        gap: 103px;
+    }
+    #congrats-text {
+        opacity: .5;
+        font-size: var(--m);
+        font-weight: 400;
+        font-style: normal;
+    }
+    #all-done-text {
+        font-size: 32px;
+        font-weight: 400;
+        font-style: normal;
+    }
+    img {
+        width: 168px;
+        height: 168px;
+    }
+}
+
+/* Track Order page */
