@@ -19,20 +19,20 @@ def order_create(request):
                                          price=item['price'],
                                          quantity=item['quantity']
                                          )
-                # clear the cart
-                cart.clear()
-                # launch asynchronous task
-                order_created.delay(order.id)
+            # clear the cart
+            cart.clear()
 
-                return render(request,
-                              'orders/orders/create.html',
-                              {'cart': cart, 'form': form}
-                              )
+            # launch asynchronous task
+            order_created.delay(order.id)
+
+            return render(request,
+                          'chollo_main/created.html',
+                          {'order': order}
+                          )
     else:
         form = OrderCreateForm()
     return render(request,
-                  'orders/orders/create.html',
+                  'chollo_main/create.html',
                   {'cart': cart, 'form': form}
                   )
-
 

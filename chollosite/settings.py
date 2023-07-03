@@ -31,15 +31,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    'chollo_main.apps.CholloMainConfig',
+    'chollo_cart.apps.CholloCartConfig',
+    'orders.apps.OrderConfig',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'chollo_main.apps.CholloMainConfig',
-    'chollo_cart.apps.CholloCartConfig',
-    'orders.apps.OrderConfig',
+    'django.contrib.admin',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +57,7 @@ ROOT_URLCONF = 'chollosite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
+        'DIRS': [BASE_DIR / 'chollo_main/templates']
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -132,3 +132,8 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+LOGIN_REDIRECT_URL = 'chollo_main:product_list'
+LOGIN_URL = 'chollo_main:login'
+LOGOUT_URL = 'chollo_main:logout'
+

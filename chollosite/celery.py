@@ -9,5 +9,11 @@ app.config_from_object('django.conf.settings', namespace='CELERY')
 app.autodiscover_tasks()
 
 
+# docker pull rabbitmq
+# docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:management
+
 # celery -A myshop worker -l info .....instead of this
-# celery -A project worker --loglevel=info ....use this
+# celery -A chollosite worker --loglevel=info ....use this
+
+
+# At some point the cart doesnt show the actual number of items

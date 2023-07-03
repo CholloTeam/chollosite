@@ -12,7 +12,7 @@
         <div id="product-cont">
             <div id="product-image-cont">
                 <div id="product-image">
-                    <img src="{% static "chollo_main/media/product-image/f559820c47c0279ebbd8321cff5e9101.png" %}" alt="">
+                    <img src="{{product.image.url}}" alt="">
                 </div>
                 <div class="shadowbox"></div>
             </div>
@@ -40,9 +40,6 @@
                         <input type="submit" value="Add to cart">
                     </form>
                 </div>
-
-
-
                 <div id="quantity">
                     <div id="redu-quan" class="align-c">
                         <img src="{% static "chollo_main/media/icon/Vector 615.svg" %}" alt="Reduce button">

@@ -27,16 +27,25 @@
                 <li><a href="" class="header-page">Blog</a></li>
             </ul>
         </div>
+
         <div id="social-links" class="header-ul">
-            <a href="{% url "chollo_main:cart_details" %}">
-                <img src="{% static "chollo_main/media/icon/shopping-cart.svg" %}" alt="Shopping cart icon" class="social-link">
-            </a>
             <a href="">
                 <img src="{% static "chollo_main/media/icon/search icon.svg" %}" alt="Search icon" class="social-link">
             </a>
-            <a href="{% url "chollo_main:signup" %}">
-                <img src="{% static "chollo_main/media/icon/avatar.svg" %}" alt="Avatar icon" class="social-link">
+
+            {% if request.user.is_authenticated %}
+            <a href="{% url "chollo_main:logout" %}">
+                <img src="{% static "chollo_main/media/icon/avatar.svg" %}" alt="Avatar icon" class="social-link"> Logout
             </a>
+
+            {% else %}
+            <a href="{% url "chollo_main:login" %}">
+                <img src="{% static "chollo_main/media/icon/avatar.svg" %}" alt="Avatar icon" class="social-link"> Login
+            </a>
+
+            {% endif %}
+
+
             <a href="">
                 <img src="{% static "chollo_main/media/icon/favourites.svg" %}" alt="Favourites icon" class="social-link">
             </a>
@@ -103,26 +112,3 @@
 </body>
 </html>
 
-
-
-
-{##}
-{#<div class="cart">#}
-{#{% with total_items=cart|length %}#}
-{#{% if total_items > 0 %}#}
-{#Your cart:#}
-{#<a href="{% url "cart:cart_detail" %}">#}
-{#{{ total_items }} item{{ total_items|pluralize }},#}
-{#${{ cart.get_total_price }}#}
-{#</a>#}
-{#{% else %}#}
-{#Your cart is empty.#}
-{#{% endif %}#}
-{#{% endwith %}#}
-{#</div>#}
-
-
-{##}
-{#<div class="cart">#}
-{#Your cart is empty.#}
-{#</div>#}

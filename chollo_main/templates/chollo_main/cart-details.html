@@ -5,9 +5,21 @@
 {% block body %}
 
     <section id="nav-menu">
+
         <div id="div-nav-menu">
-            Home / Categories / Clothing’s / Nnamdi Men’s Store / Men’s Shirt
+            {% with total_items=cart|length %}
+            {% if total_items > 0 %}
+            Your cart:
+            <a href="{% url "chollo_cart:cart_detail" %}">
+            {{ total_items }} item{{ total_items|pluralize }},
+            N{{ cart.get_total_price }}
+            </a>
+            {% elif not order %}
+                Your cart is empty.
+            {% endif %}
+            {% endwith %}
         </div>
+
     </section>
     <section>
         <div id="loc-pay">
@@ -46,8 +58,22 @@
                         <div class="bt-two-title">
                             <p class="product-name">{{ product.name }}</p>
                         </div>
-                        <p class="bt-two-price">NGN {{ product.price }}</p>
+
+                        <form action="{% url "chollo_cart:add_to_cart" product.id %}" method="post">
+                            {{ item.update_quantity_form.quantity }}
+                            {{ item.update_quantity_form.override }}
+                            <input type="submit" value="Update">
+                            {% csrf_token %}
+                        </form>
+
+                        <p class="bt-two-price">UNIT PRICE: N{{ product.price }}</p>
+                        <p class="bt-two-price">Price: N{{ item.total_price }}</p>
                     </div>
+                    <form action="{% url "chollo_cart:remove_from_cart" product.id %}"
+                        method="post">
+                        <input type="submit" value="Remove">
+                        {% csrf_token %}
+                    </form>
                     <div class="c-quantity">
                         <div class="align-c redu-quan">
                             <img src="{% static "chollo_main/media/icon/Vector 615.svg" %}" alt="Reduce button">
@@ -83,7 +109,7 @@
                 <div id="sump">
                     <p id="ticsmbx1" class="sump50">Total items cost</p>
                     <p id="ticsmbx2" class="sump50">Total shipping</p>
-                    <p id="ticsmbx3">NGN 12,000</p>
+                    <p id="ticsmbx3">N {{ cart.get_total_price }}</p>
                     <p id="ticsmbx4">Free</p>
                 </div>
             </div>
@@ -91,83 +117,13 @@
                 <p class="summbox32">Total</p>
                 <h2 class="summbox32">NGN 12,000</h2>
             </div>
+            <a href="{% url "orders:order_create" %}" >
             <div class="white" id="m-white">
-                <button id="buy-now" class="btn place-o">Place Order</button>
+                <button id="buy-now" class="btn place-o">Checkout</button>
             </div>
+            </a>
         </div>
     </section>
 
 {% endblock %}
-
-
-{##}
-{##}
-{#{% block title %}#}
-{#Your shopping cart#}
-{#{% endblock %}#}
-{#{% block content %}#}
-{#<h1>Your shopping cart</h1>#}
-{#<table class="cart">#}
-{#<thead>#}
-{#<tr>#}
-
-
-{#<th>Image</th>#}
-{#<th>Product</th>#}
-{#<th>Quantity</th>#}
-{#<th>Remove</th>#}
-{#<th>Unit price</th>#}
-{#<th>Price</th>#}
-{#</tr>#}
-{#</thead>#}
-{#<tbody>#}
-{#{% for item in cart %}#}
-{#{% with product=item.product %}#}
-{#<tr>#}
-{#<td>#}
-{#<a href="{{ product.get_absolute_url }}">#}
-{#<img src="{% if product.image %}{{ product.image.url }}#}
-{#{% else %}{% static "img/no_image.png" %}{% endif %}">#}
-{#</a>#}
-{#</td>#}
-{##}
-{#<td>{{ product.name }}</td>#}
-{##}
-{#    <td>#}
-{#<form action="{% url "cart:cart_add" product.id %}" method="post">#}
-{#{{ item.update_quantity_form.quantity }}#}
-{#{{ item.update_quantity_form.override }}#}
-{#<input type="submit" value="Update">#}
-{#{% csrf_token %}#}
-{#</form>#}
-{##}
-{#    <td>#}
-{#<form action="{% url "cart:cart_remove" product.id %}"#}
-{#method="post">#}
-{#<input type="submit" value="Remove">#}
-{#{% csrf_token %}#}
-{#</form>#}
-{#</td>#}
-{#<td class="num">${{ item.price }}</td>#}
-{#<td class="num">${{ item.total_price }}</td>#}
-{#</tr>#}
-{#{% endwith %}#}
-{#{% endfor %}#}
-{#<tr class="total">#}
-{#<td>Total</td>#}
-{#<td colspan="4"></td>#}
-{#<td class="num">${{ cart.get_total_price }}</td>#}
-{#</tr>#}
-{#</tbody>#}
-{#</table>#}
-{#<p class="text-right">#}
-{#<a href="{% url "shop:product_list" %}" class="button#}
-{#light">Continue shopping</a>#}
-{##}
-{#<a href="{% url "orders:order_create" %}" class="button">#}
-{#Checkout#}
-{#</a>#}
-{##}
-{#</p>#}
-{#{% endblock %}#}
 

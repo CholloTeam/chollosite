@@ -3,9 +3,6 @@ from chollo_main.models import Product
 
 
 # Create your models here.
-class Order:
-    pass
-
 
 class Order(models.Model):
     first_name = models.CharField(max_length=50)

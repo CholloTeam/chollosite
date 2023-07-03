@@ -82,7 +82,7 @@ class Cart:
 
         ##### CHECK ON THIS PLEASE!! ENSURE THERE"S A REASON WHY IT"S NOT DECIMAL
 
-        return sum(item['price'] * item['quantity'] for item in self.chollo_cart.values())
+        return sum(Decimal(item['price']) * Decimal(item['quantity']) for item in self.chollo_cart.values())
 
     def clear(self):
         # Remove cart from session

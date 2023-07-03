@@ -1,5 +1,6 @@
 import random
 
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404
 from chollo_cart.forms import CartAddProductForm
 from . models import Category, Product
@@ -49,6 +50,12 @@ def product_details(request, id, slug):
                    "cart_product_form": cart_product_form,
                    }
                   )
+
+
+@login_required
+def dashboard(request):
+    return render(request, 'registration/login.html',
+                  {'section': 'dashboard'})
 
 
 def signin(request):
