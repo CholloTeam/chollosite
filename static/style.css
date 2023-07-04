@@ -1587,3 +1587,158 @@ footer {
     color: #ef2d2d;
     text-transform: uppercase;
 }
+
+/* Confirmation page */
+#confirmation-container {
+    width: 100svw;
+    display: flex;
+    flex-direction: column;
+    gap: 67px;
+    align-items: center;
+    padding: 55px 0px;
+    #confirmation-div {
+        display: flex;
+        gap: 103px;
+    }
+    #congrats-text {
+        opacity: .5;
+        font-size: var(--m);
+        font-weight: 400;
+        font-style: normal;
+    }
+    #all-done-text {
+        font-size: 32px;
+        font-weight: 400;
+        font-style: normal;
+    }
+    img {
+        width: 168px;
+        height: 168px;
+    }
+}
+
+/* Track Order page */
+#order-confirmation-container {
+    margin: 0px var(--margin-right);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    #order-tracking {
+        display: flex;
+        flex-direction: column;
+        gap: 46px;
+        padding: 35px 60px;
+        border-radius: 8px;
+        background: #FFF;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.03);
+        #delivery-details {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            #ot-dd-image {
+                width: 24px;
+                height: 24px;
+                opacity: .7;
+            }
+            #ot-dd-text {
+                font-size: var(--xs);
+                color: #0f172a;
+                .ot-dt-date, ot-dt-time {
+                    opacity: 1;
+                }
+            }
+        }
+        #progress-bar {
+            width: 100%;
+            #progressbar-empty {
+                border-radius: 2px;
+                background: #FFF5EE;
+                height: 20px;
+                width: 100%;
+                #progressbar-progress {
+                    border-radius: 2px 0px 0px 2px;
+                    background: #FEA461;
+                    overflow: visible;
+                    display: flex;
+                    justify-content: flex-end;
+                    width: 73%;
+                    height: 20px;
+                    position: relative;
+                    #progressbar-progress-indicator {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        align-items: center;
+                        position: absolute;
+                        bottom: 14px;
+                        right: -22px;
+                        width: 52px;
+                        height: 52px;
+                        #pb-p-i-text {
+                            color: #F58634;
+                            font-size: 14px;
+                            font-family: Lato;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }     
+        }
+        #tracking-status {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding: 50px;
+            border-radius: 4px;
+            background: #FFF5EE;
+            #ot-trackingunavailabletext {
+                font-size: 32px;
+                font-weight: 400;
+                font-style: normal;
+                color: #0f172a;
+            }
+            #ot-processingordertext, #ot-dateandtime, #ot-dateandtime > span {
+                font-size: var(--m);
+                font-weight: 400;
+                font-style: normal;
+                color: #0f172a;
+            }
+            #ot-processingordertext{
+                opacity: .5;
+            }
+            #ot-dateandtime {
+                opacity: .7;
+            }
+        }
+    }
+    #order-details {
+        display: flex;
+        justify-content: space-between;
+        padding: 24px 55px;
+        border-radius: 8px;
+        background: #FFF;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.03);
+        #od-storename, #od-ordercode, #od-location {
+            display: flex;
+            gap: 20px;
+            font-size: var(--xxxs);
+            align-items: center;
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+        #od-storename {
+            .od-img-image {
+                opacity: .5;
+            }
+        }
+        #od-location {
+            .od-img-image {
+                opacity: 50%;
+            }
+        }
+    }
+}
