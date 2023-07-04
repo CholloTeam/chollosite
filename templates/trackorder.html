@@ -45,8 +45,52 @@
         </div>
     </section>
     <section id="order-confirmation-container">
-        <div id="order-tracking"></div>
-        <div id="order-details"></div>
+        <div id="order-tracking">
+            <div id="delivery-details">
+                <img src="../static/media/icon/inbox-stack.svg" alt="Inbox icon" id="ot-dd-image">
+                <p id="ot-dd-text">
+                    <span style="opacity: .5;">Estimated delivery on </span>
+                    <span id="ot-dd-dateandtime">
+                        <span class="ot-dt-date">Jun 13</span> by <span class="ot-dt-time">2:00pm</span>
+                    </span>
+                </p>
+            </div>
+            <div id="progress-bar">
+                <div id="progressbar-empty">
+                    <div id="progressbar-progress">
+                        <div id="progressbar-progress-indicator">
+                            <p id="pb-p-i-text">73%</p>
+                            <img src="../static/media/icon/Group 10.png" alt="Progress indicator" id="pb-p-i-indicator">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tracking-status">
+                <p id="ot-dateandtime">
+                    <span class="ot-dt-date">Jun 13</span> by <span class="ot-dt-time">2:00pm</span>
+                </p>
+                <p id="ot-trackingunavailabletext">
+                    Tracking Unavailable
+                </p>
+                <p id="ot-processingordertext">
+                    Your Order is being processed. The tracking status will update soon
+                </p>
+            </div>
+        </div>
+        <div id="order-details">
+            <div id="od-storename">
+                <img src="../static/media/icon/heroicons-outline/store-icon.svg" alt="Store icon" class="od-image od-img-image"> 
+                <p class="od-text">Nnamdi Store</p>
+            </div>
+            <div id="od-ordercode">
+                <img src="../static/media/icon/heroicons-outline/document-duplicate.svg" alt="Code icon" class="od-image">
+                <p class="od-text">73365FD</p>
+            </div>
+            <div id="od-location">
+                <img src="../static/media/icon/heroicons-outline/location-icon.png" alt="LOcation icon" class="od-image od-img-image">
+                <p class="od-text">Your Address school</p>
+            </div>
+        </div>
     </section>
     <footer>
     <div id="footer-docl">
