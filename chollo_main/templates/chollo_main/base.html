@@ -46,6 +46,17 @@
             {% endif %}
 
 
+            {% if messages %}
+                <ul class="messages">
+            {% for message in messages %}
+                <li class="{{ message.tags }}">
+                {{ message|safe }}
+                <a href="#" class="close">x</a>
+                </li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+
             <a href="">
                 <img src="{% static "chollo_main/media/icon/favourites.svg" %}" alt="Favourites icon" class="social-link">
             </a>

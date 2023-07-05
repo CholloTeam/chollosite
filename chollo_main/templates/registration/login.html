@@ -1,21 +1,102 @@
 {% extends "chollo_main/base.html" %}
-{% block title %}Log-in{% endblock %}
+
+{% load static %}
+
+
 {% block body %}
-<h1>Log-in</h1>
-{% if form.errors %}
-<p>
-Your username and password didn't match.
-Please try again.
-</p>
-{% else %}
-<p>Please, use the following form to log-in:</p>
-{% endif %}
-<div class="login-form">
-<form action="{% url 'chollo_main:login' %}" method="post">
-{{ form.as_p }}
-{% csrf_token %}
-<input type="hidden" name="next" value="{{ next }}" />
-<p><input type="submit" value="Log-in"></p>
-</form>
-</div>
+    <main id="s-main-cont">
+        <section id="incre-me">
+            <section id="s-n-img-cont">
+                <div id="s-n-img">
+                    <div id="s-n-logo-cont">
+                        <main id="main-1">
+                            <section id="main-1-s1">
+                                <h1 id="m-s-h1">Sign in</h1>
+                                
+                            </section>
+                            <section id="main-1-s2">
+                                <form action="" method="POST" id="s-form">
+                                    <div id="auth-s-f">
+                                        <div class="s-f-input-c">
+                                            <span>
+                                                <img src="{% static "chollo_main/media/icon/bxl-google (copy).svg" %}" alt="Google icon">
+                                            </span>
+                                            <p class="s-f-input-p">Sign In with Google
+                                            </p>
+                                        </div>
+                                        <div class="s-f-input-c">
+                                            <span>
+                                                <img src="{% static "chollo_main/media/icon/bxl-facebook (copy).svg" %}" alt="Facebook icon">
+                                            </span>
+                                            <p class="s-f-input-p">Sign In with Facebook
+                                            </p>
+                                        </div>                             
+                                    </div>
+
+                                        {% csrf_token %}
+                                        {{ form.username.errors }}
+                                        <input class="s-f-input" id="s-email" placeholder="Email/ Username" name="username">
+                                        {{ form.password.errors }}
+                                        <input class="s-f-input" type="password" id="s-password" placeholder="Password" name="password">
+                                        <main id="main-2">
+                                            <button type="submit" class="s-btn" id="s-l-btn">Log in</button>
+                                        </main>
+
+                                </form>
+                            </section>
+                        </main>
+
+                        <a href="{% url 'chollo_main:password_reset' %}"> <p id="n-main" class="f-p">Forgot password</p> </a>
+
+                        <p id="m-s-p">Not Registered? <a href="{% url 'chollo_main:register' %}"> <span id="n-main" class="f-p">Register</span> </a> </p>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
 {% endblock %}
+
+    <footer id="f-mobile-visible">
+        <div id="footer-docl">
+            <div class="footer-link-con">
+                <ul class="footer-links">
+                    <li><a href="" class="footer-link">Collection</a></li>
+                    <li><a href="" class="footer-link">Catalog</a></li>
+                    <li><a href="" class="footer-link">About Us</a></li>
+                    <li><a href="" class="footer-link">Blog</a></li>
+                </ul>
+            </div>
+            <div id="footer-social">
+                <a href="" class="soc-icon">
+                    <img src="{% static "chollo_main/media/icon/bx-envelope.svg" %}" alt="Email icon">
+                </a>
+                <a href="" class="soc-icon mobile-mvd">
+                    <img src="{% static "chollo_main/media/icon/bxl-facebook.svg" %}" alt="Facebook icon">
+                </a>
+                <a href="" class="soc-icon">
+                    <img src="{% static "chollo_main/media/icon/bxl-instagram.svg" %}" alt="Instagram icon">
+                </a>
+                <a href="" class="soc-icon mobile-mvd">
+                    <img src="{% static "chollo_main/media/icon/bxs-phone.svg" %}" alt="Phone icon">
+                </a>
+                <a href="" class="soc-icon">
+                    <img src="{% static "chollo_main/media/icon/bxl-twitter.svg" %}" alt="Twitter icon">
+                </a>
+            </div>
+        </div>
+        <hr id="top-line">
+        <div id="footer-docs">
+            <a href="">CUSTOMERS SERVICE AND TERMS</a>
+            <a href="">MATERIALS & CARE</a>
+            <a href="">PRIVACY POLICY</a>
+        </div>
+        <hr id="bottom-line">
+    </footer>
+
+{% block foot %}
+{% endblock %}
+
+</body>
+</html>
+
+

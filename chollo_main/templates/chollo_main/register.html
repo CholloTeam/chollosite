@@ -1,0 +1,91 @@
+{#{% extends "chollo_main/base.html" %}#}
+{##}
+{#{% load static %}#}
+{##}
+{#{% block body %}#}
+{#    <main id="s-main-cont">#}
+{#        <section id="incre-me">#}
+{#            <section id="s-n-img-cont">#}
+{#                <div id="s-n-img">#}
+{#                    <div id="s-n-logo-cont">#}
+{#                        <main id="main-1">#}
+{#                            <section id="main-1-s1">#}
+{#                                <p id="m-s-p">Continue without an Account</p>#}
+{#                                <h1 id="m-s-h1">Sign up</h1>#}
+{#                                #}
+{#                            </section>#}
+{#                            <section id="main-1-s2">#}
+{#                                <form action="" id="s-form">#}
+{#                                    <input class="s-f-input" type="text" id="s-username" placeholder="Full name">#}
+{#                                    <input class="s-f-input" type="email" id="s-email" placeholder="Email">#}
+{#                                    <input class="s-f-input" type="password" id="s-password" placeholder="Password">#}
+{#                                </form>#}
+{#                            </section>#}
+{#                        </main>#}
+{#                        <main id="main-2">#}
+{#                            <button class="s-btn" id="s-l-btn">Create an Account</button>#}
+{#                        </main>#}
+{#                        <p id="n-main">Already have an account? <span style="color: var(--orange);">Log in</span></p>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </section>#}
+{#        </section>#}
+{#    </main>#}
+{#{% endblock %}#}
+{##}
+{##}
+{#    <footer id="f-mobile-visible">#}
+{#        <div id="footer-docl">#}
+{#            <div class="footer-link-con">#}
+{#                <ul class="footer-links">#}
+{#                    <li><a href="" class="footer-link">Collection</a></li>#}
+{#                    <li><a href="" class="footer-link">Catalog</a></li>#}
+{#                    <li><a href="" class="footer-link">About Us</a></li>#}
+{#                    <li><a href="" class="footer-link">Blog</a></li>#}
+{#                </ul>#}
+{#            </div>#}
+{#            <div id="footer-social">#}
+{#                <a href="" class="soc-icon">#}
+{#                    <img src="{% static "chollo_main/media/icon/bx-envelope.svg" %}" alt="Email icon">#}
+{#                </a>#}
+{#                <a href="" class="soc-icon mobile-mvd">#}
+{#                    <img src="{% static "chollo_main/media/icon/bxl-facebook.svg" %}" alt="Facebook icon">#}
+{#                </a>#}
+{#                <a href="" class="soc-icon">#}
+{#                    <img src="{% static "chollo_main/media/icon/bxl-instagram.svg" %}" alt="Instagram icon">#}
+{#                </a>#}
+{#                <a href="" class="soc-icon mobile-mvd">#}
+{#                    <img src="{% static "chollo_main/media/icon/bxs-phone.svg" %}" alt="Phone icon">#}
+{#                </a>#}
+{#                <a href="" class="soc-icon">#}
+{#                    <img src="{% static "chollo_main/media/icon/bxl-twitter.svg" %}" alt="Twitter icon">#}
+{#                </a>#}
+{#            </div>#}
+{#        </div>#}
+{#        <hr id="top-line">#}
+{#        <div id="footer-docs">#}
+{#            <a href="">CUSTOMERS SERVICE AND TERMS</a>#}
+{#            <a href="">MATERIALS & CARE</a>#}
+{#            <a href="">PRIVACY POLICY</a>#}
+{#        </div>#}
+{#        <hr id="bottom-line">#}
+{#    </footer>#}
+{##}
+{#{% block foot %}#}
+{#{% endblock %}#}
+{##}
+{#</body>#}
+{#</html>#}
+
+
+{% extends "chollo_main/base.html" %}
+{% block title %}Create an account{% endblock %}
+{% block body %}
+<h1>Create an account</h1>
+<p>Please, sign up using the following form:</p>
+<form method="post">
+{{ user_form.as_p }}
+{% csrf_token %}
+<p><input type="submit" value="Create my account"></p>
+</form>
+{% endblock %}
