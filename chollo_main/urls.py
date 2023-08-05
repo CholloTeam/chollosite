@@ -31,9 +31,10 @@ urlpatterns = [
     path("product_list/<slug:category_slug>", views.product_list, name='product_list_by_category'),
     path("product_detail/<int:id>/<slug:slug>", views.product_details, name='product_detail'),
     path("register/", views.register, name='register'),
-    path("cart_details/", views.cart_details, name='cart_details'),
+    # path("cart_details/", views.cart_details, name='cart_details'),
     path('edit/', views.edit, name='edit'),
-    path('dashboard/', views.dashboard, name='dashboard')
+    path('dashboard/', views.dashboard, name='dashboard'),
+    path('search/', views.item_search, name='item_search'),
 
 ]
 

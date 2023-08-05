@@ -1,0 +1,964 @@
+[
+{
+  "model": "chollo_main.category",
+  "pk": 1,
+  "fields": {
+    "name": "Laptops",
+    "slug": "laptops"
+  }
+},
+{
+  "model": "chollo_main.category",
+  "pk": 2,
+  "fields": {
+    "name": "Headphones",
+    "slug": "headphones"
+  }
+},
+{
+  "model": "chollo_main.category",
+  "pk": 3,
+  "fields": {
+    "name": "Shoes",
+    "slug": "shoes"
+  }
+},
+{
+  "model": "chollo_main.category",
+  "pk": 4,
+  "fields": {
+    "name": "Clothes",
+    "slug": "clothes"
+  }
+},
+{
+  "model": "chollo_main.category",
+  "pk": 5,
+  "fields": {
+    "name": "Beauty Picks",
+    "slug": "beauty-picks"
+  }
+},
+{
+  "model": "chollo_main.category",
+  "pk": 6,
+  "fields": {
+    "name": "Handbags",
+    "slug": "handbags"
+  }
+},
+{
+  "model": "chollo_main.category",
+  "pk": 7,
+  "fields": {
+    "name": "Electronics",
+    "slug": "electronics"
+  }
+},
+{
+  "model": "chollo_main.product",
+  "pk": 1,
+  "fields": {
+    "category": 1,
+    "name": "Lenovo 250",
+    "price": "150000.00",
+    "slug": "lenovo-250",
+    "image": "products/2023/06/29/macbook.png",
+    "description": "Macbook is a dope computer. get it and have a taste of it!!",
+    "available": true,
+    "created": "2023-06-29T16:29:37.588Z",
+    "updated": "2023-06-29T16:29:37.588Z"
+  }
+},
+{
+  "model": "chollo_main.product",
+  "pk": 2,
+  "fields": {
+    "category": 2,
+    "name": "Oraimo Headphone",
+    "price": "15000.00",
+    "slug": "oraimo-headphone",
+    "image": "products/2023/06/29/headphones.png",
+    "description": "Very cool sounding based headphone you could try out.",
+    "available": true,
+    "created": "2023-06-29T16:31:04.524Z",
+    "updated": "2023-06-29T16:31:04.525Z"
+  }
+},
+{
+  "model": "chollo_main.product",
+  "pk": 3,
+  "fields": {
+    "category": 4,
+    "name": "Shirt",
+    "price": "12000.00",
+    "slug": "shirt",
+    "image": "products/2023/06/29/5fb8affd2c5d7c0ef4d52aec564efde7_1.png",
+    "description": "Cool shirt you would want to try it out!",
+    "available": true,
+    "created": "2023-06-29T16:32:09.295Z",
+    "updated": "2023-06-29T16:32:09.295Z"
+  }
+},
+{
+  "model": "chollo_main.product",
+  "pk": 4,
+  "fields": {
+    "category": 4,
+    "name": "Long Shirt",
+    "price": "11000.00",
+    "slug": "long-shirt",
+    "image": "products/2023/06/29/5fb8affd2c5d7c0ef4d52aec564efde7.png",
+    "description": "Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out",
+    "available": true,
+    "created": "2023-06-29T16:33:00.358Z",
+    "updated": "2023-06-29T16:33:00.359Z"
+  }
+},
+{
+  "model": "chollo_main.product",
+  "pk": 5,
+  "fields": {
+    "category": 4,
+    "name": "Shirt short",
+    "price": "20000.00",
+    "slug": "shirt-short",
+    "image": "products/2023/06/29/5fb8affd2c5d7c0ef4d52aec564efde7_8Xy2cxS.png",
+    "description": "Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt outTry this cool shirt out Try this cool shirt out",
+    "available": true,
+    "created": "2023-06-29T16:34:17.403Z",
+    "updated": "2023-06-29T16:34:17.403Z"
+  }
+},
+{
+  "model": "chollo_main.product",
+  "pk": 6,
+  "fields": {
+    "category": 4,
+    "name": "Shirt shine",
+    "price": "22000.01",
+    "slug": "shirt-shine",
+    "image": "products/2023/06/29/21f21eeca6accf7416fc2b27bae3450f.png",
+    "description": "Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out",
+    "available": true,
+    "created": "2023-06-29T16:35:20.599Z",
+    "updated": "2023-06-29T16:35:20.599Z"
+  }
+},
+{
+  "model": "chollo_main.product",
+  "pk": 7,
+  "fields": {
+    "category": 4,
+    "name": "Shirt Sh",
+    "price": "22000.00",
+    "slug": "shirt-sh",
+    "image": "products/2023/06/29/bab469d61797b42a259aaf3affa61130_1.png",
+    "description": "Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out",
+    "available": true,
+    "created": "2023-06-29T16:36:13.021Z",
+    "updated": "2023-06-29T16:36:13.021Z"
+  }
+},
+{
+  "model": "chollo_main.product",
+  "pk": 8,
+  "fields": {
+    "category": 4,
+    "name": "Shirt zDE",
+    "price": "11000.00",
+    "slug": "shirt-zde",
+    "image": "products/2023/06/29/f5c6d5787101ab97e3a389dd81f7e708.png",
+    "description": "Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out",
+    "available": true,
+    "created": "2023-06-29T16:36:56.273Z",
+    "updated": "2023-06-29T16:36:56.273Z"
+  }
+},
+{
+  "model": "chollo_main.product",
+  "pk": 9,
+  "fields": {
+    "category": 4,
+    "name": "Shirt Shirt",
+    "price": "12000.00",
+    "slug": "shirt-shirt",
+    "image": "products/2023/06/29/f559820c47c0279ebbd8321cff5e9101.png",
+    "description": "Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out",
+    "available": true,
+    "created": "2023-06-29T16:37:50.841Z",
+    "updated": "2023-06-29T16:37:50.841Z"
+  }
+},
+{
+  "model": "chollo_main.product",
+  "pk": 10,
+  "fields": {
+    "category": 6,
+    "name": "Handbag",
+    "price": "10000.00",
+    "slug": "handbag",
+    "image": "products/2023/06/29/handbag.png",
+    "description": "Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out",
+    "available": true,
+    "created": "2023-06-29T16:39:33.601Z",
+    "updated": "2023-06-29T16:39:33.601Z"
+  }
+},
+{
+  "model": "chollo_main.product",
+  "pk": 11,
+  "fields": {
+    "category": 3,
+    "name": "Shoe",
+    "price": "35000.00",
+    "slug": "shoe",
+    "image": "products/2023/06/29/nikedod.png",
+    "description": "Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out",
+    "available": true,
+    "created": "2023-06-29T16:41:52.416Z",
+    "updated": "2023-06-29T16:41:52.416Z"
+  }
+},
+{
+  "model": "chollo_main.product",
+  "pk": 12,
+  "fields": {
+    "category": 3,
+    "name": "Shoe nike",
+    "price": "25000.00",
+    "slug": "shoe-nike",
+    "image": "products/2023/06/29/nikekicks.png",
+    "description": "Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out",
+    "available": true,
+    "created": "2023-06-29T16:42:16.592Z",
+    "updated": "2023-06-29T16:42:16.592Z"
+  }
+},
+{
+  "model": "chollo_main.product",
+  "pk": 13,
+  "fields": {
+    "category": 5,
+    "name": "Lip glose",
+    "price": "1000.00",
+    "slug": "lip-glose",
+    "image": "products/2023/06/29/beautypicks.png",
+    "description": "Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out",
+    "available": true,
+    "created": "2023-06-29T16:43:08.872Z",
+    "updated": "2023-06-29T16:43:08.872Z"
+  }
+},
+{
+  "model": "chollo_main.product",
+  "pk": 14,
+  "fields": {
+    "category": 7,
+    "name": "AirPod",
+    "price": "7000.00",
+    "slug": "airpod",
+    "image": "products/2023/06/29/airpods.png",
+    "description": "Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out Try this cool shirt out",
+    "available": true,
+    "created": "2023-06-29T16:46:17.049Z",
+    "updated": "2023-06-29T16:46:17.049Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 1,
+  "fields": {
+    "first_name": "Samuel",
+    "last_name": "Osondu",
+    "email": "samuelosondu99@gmail.com",
+    "address": "Mr Osondu Ugwu's Compound., Amachara Ovoko.",
+    "postal_code": "413110",
+    "city": "Ovoko",
+    "created": "2023-07-03T15:44:29.057Z",
+    "updated": "2023-07-03T15:44:29.057Z",
+    "paid": false
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 2,
+  "fields": {
+    "first_name": "Samuel",
+    "last_name": "Osondu",
+    "email": "samuelosondu99@gmail.com",
+    "address": "Mr Osondu Ugwu's Compound., Amachara Ovoko.",
+    "postal_code": "413110",
+    "city": "Ovoko",
+    "created": "2023-07-03T15:44:54.365Z",
+    "updated": "2023-07-03T15:44:54.365Z",
+    "paid": false
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 3,
+  "fields": {
+    "first_name": "Samuel",
+    "last_name": "Osondu",
+    "email": "samuelosondu99@gmail.com",
+    "address": "Mr Osondu Ugwu's Compound., Amachara Ovoko.",
+    "postal_code": "413110",
+    "city": "Ovoko",
+    "created": "2023-07-03T15:46:15.492Z",
+    "updated": "2023-07-03T15:46:15.492Z",
+    "paid": false
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 4,
+  "fields": {
+    "first_name": "Samuel",
+    "last_name": "Osondu",
+    "email": "samuelosondu99@gmail.com",
+    "address": "Mr Osondu Ugwu's Compound., Amachara Ovoko.",
+    "postal_code": "413110",
+    "city": "Ovoko",
+    "created": "2023-07-03T15:53:16.068Z",
+    "updated": "2023-07-03T15:53:16.068Z",
+    "paid": false
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 5,
+  "fields": {
+    "first_name": "Samuel",
+    "last_name": "Osondu",
+    "email": "samuelosondu99@gmail.com",
+    "address": "Mr Osondu Ugwu's Compound., Amachara Ovoko.",
+    "postal_code": "413110",
+    "city": "Ovoko",
+    "created": "2023-07-03T16:03:45.649Z",
+    "updated": "2023-07-03T16:03:45.649Z",
+    "paid": false
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 6,
+  "fields": {
+    "first_name": "Samuel",
+    "last_name": "Osondu",
+    "email": "samuelosondu99@gmail.com",
+    "address": "Mr Osondu Ugwu's Compound., Amachara Ovoko.",
+    "postal_code": "413110",
+    "city": "Ovoko",
+    "created": "2023-07-03T16:55:39.280Z",
+    "updated": "2023-07-03T16:55:39.280Z",
+    "paid": false
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 7,
+  "fields": {
+    "first_name": "Samuel",
+    "last_name": "Osondu",
+    "email": "samuelosondu99@gmail.com",
+    "address": "Mr Osondu Ugwu's Compound., Amachara Ovoko.",
+    "postal_code": "413110",
+    "city": "Ovoko",
+    "created": "2023-07-03T16:56:33.909Z",
+    "updated": "2023-07-03T16:56:33.909Z",
+    "paid": false
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 8,
+  "fields": {
+    "first_name": "Samuel",
+    "last_name": "Osondu",
+    "email": "samuelosondu99@gmail.com",
+    "address": "Mr Osondu Ugwu's Compound., Amachara Ovoko.",
+    "postal_code": "413110",
+    "city": "Ovoko",
+    "created": "2023-07-03T16:59:26.057Z",
+    "updated": "2023-07-03T16:59:26.057Z",
+    "paid": false
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 9,
+  "fields": {
+    "first_name": "Samuel",
+    "last_name": "Osondu",
+    "email": "samuelosondu99@gmail.com",
+    "address": "Mr Osondu Ugwu's Compound., Amachara Ovoko.",
+    "postal_code": "413110",
+    "city": "Ovoko",
+    "created": "2023-07-03T17:00:41.549Z",
+    "updated": "2023-07-03T17:00:41.549Z",
+    "paid": false
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 10,
+  "fields": {
+    "first_name": "Samuel",
+    "last_name": "Osondu",
+    "email": "samuelosondu99@gmail.com",
+    "address": "Mr Osondu Ugwu's Compound., Amachara Ovoko.",
+    "postal_code": "413110",
+    "city": "Ovoko",
+    "created": "2023-07-03T17:04:13.752Z",
+    "updated": "2023-07-03T17:04:13.752Z",
+    "paid": false
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 11,
+  "fields": {
+    "first_name": "Samuel",
+    "last_name": "Osondu",
+    "email": "samuelosondu99@gmail.com",
+    "address": "Mr Osondu Ugwu's Compound., Amachara Ovoko.",
+    "postal_code": "413110",
+    "city": "Ovoko",
+    "created": "2023-07-03T17:32:51.858Z",
+    "updated": "2023-07-03T17:32:51.858Z",
+    "paid": false
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 1,
+  "fields": {
+    "order": 1,
+    "product": 13,
+    "price": "1000.00",
+    "quantity": 11
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 2,
+  "fields": {
+    "order": 2,
+    "product": 13,
+    "price": "1000.00",
+    "quantity": 11
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 3,
+  "fields": {
+    "order": 3,
+    "product": 13,
+    "price": "1000.00",
+    "quantity": 11
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 4,
+  "fields": {
+    "order": 4,
+    "product": 13,
+    "price": "1000.00",
+    "quantity": 11
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 5,
+  "fields": {
+    "order": 5,
+    "product": 9,
+    "price": "12000.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 6,
+  "fields": {
+    "order": 6,
+    "product": 9,
+    "price": "12000.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 7,
+  "fields": {
+    "order": 7,
+    "product": 9,
+    "price": "12000.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 8,
+  "fields": {
+    "order": 7,
+    "product": 11,
+    "price": "35000.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 9,
+  "fields": {
+    "order": 8,
+    "product": 9,
+    "price": "12000.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 10,
+  "fields": {
+    "order": 9,
+    "product": 9,
+    "price": "12000.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 11,
+  "fields": {
+    "order": 9,
+    "product": 11,
+    "price": "35000.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 12,
+  "fields": {
+    "order": 9,
+    "product": 1,
+    "price": "150000.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 13,
+  "fields": {
+    "order": 10,
+    "product": 9,
+    "price": "12000.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 14,
+  "fields": {
+    "order": 10,
+    "product": 11,
+    "price": "35000.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 15,
+  "fields": {
+    "order": 10,
+    "product": 1,
+    "price": "150000.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 16,
+  "fields": {
+    "order": 11,
+    "product": 9,
+    "price": "12000.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 17,
+  "fields": {
+    "order": 11,
+    "product": 11,
+    "price": "35000.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 18,
+  "fields": {
+    "order": 11,
+    "product": 1,
+    "price": "150000.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$I1G7QWFSjHBu1epjjQFanD$jJ8dy0SMGVEEMqHBldfEex2mm+k9WYrEoz/U8dJDZPw=",
+    "last_login": "2023-07-05T20:08:51.584Z",
+    "is_superuser": true,
+    "username": "osondusamuel",
+    "first_name": "",
+    "last_name": "",
+    "email": "samuelosondu99@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-06-23T21:17:21.667Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$repgwAjbvddUZ9xfryVs7O$Ur6nSOSkNBYGHjfnuhZ41Iv/22xBmLrI6MIp3F/Yoz8=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "mba",
+    "first_name": "angel",
+    "last_name": "",
+    "email": "samuel.osondu.241179@unn.edu.ng",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-07-05T11:37:54.641Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$1UVCou7tXXZMMxImeFK24I$T7dX9e8kDD0rjbik2vqhfNP48AH0cEcuIV7sC3p3C88=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "enemichael",
+    "first_name": "michael",
+    "last_name": "",
+    "email": "samuel.osondu.241179@unn.edu.ng",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-07-05T11:39:13.304Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "d020m1mu469iiagfdvtq25avfzwys4om",
+  "fields": {
+    "session_data": ".eJxVjDEOgzAMRe_iuYpIjZPA2L1nQLaTFNoKJAIT4u4tEgvrf-_9DZTnBdptv0HH69J3a0lzN0RowcJlE9ZPGg8Q3zy-JqPTuMyDmEMxJy3mOcX0fZzu5aDn0v9ruquieIm2Viccnc2IQYly45UasVoHcRU3Hj05CkwZhbRCFyKhR9h_MjQ6yQ:1qH8oP:x_0Jupo8boMgkmSlPlVUVW1ZbVAh4sjzTOM4L5OIsqI",
+    "expire_date": "2023-07-19T20:09:17.079Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "sui0kr58nmrobbb0ctlugzmyrwbo1ym1",
+  "fields": {
+    "session_data": ".eJxVjDsOg0AMBe_iOlrhBXYxZXrOgOy1CSQRSHwqxN0TJBraNzNvh8TzCvV-PKDlbe3bbbG5HRRqQLhtwulj4wn0zeNrcmka13kQdyruootrJrXv83JvBz0v_b8WkoCYWEKlxF0pVelLymJAjrk3UdKUEWEhkvnYkaGypKIyw9x7VDh-NOU7dg:1qGhlc:SWD74ZOTHIsz2FUNTAgD981QvWqo9Hp62g-5WeLVXQs",
+    "expire_date": "2023-07-18T15:16:36.339Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "wtvmjwq01gsib9yaanyaowew4mc1io7w",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qGQil:karCmeHwfStNq76JyknAzQSw338gVmYqlgvLIvQaQbw",
+    "expire_date": "2023-07-17T21:04:31.871Z"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2023-06-29T16:22:22.932Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Laptops",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2023-06-29T16:22:52.877Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Headphones",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2023-06-29T16:22:58.666Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Shoes",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2023-06-29T16:23:03.477Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Clothes",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2023-06-29T16:23:26.122Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Beauty Picks",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2023-06-29T16:23:37.501Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "Handbags",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2023-06-29T16:29:37.592Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Lenovo 250",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2023-06-29T16:31:04.587Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Oraimo Headphone",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2023-06-29T16:32:09.337Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Shirt",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2023-06-29T16:33:00.404Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Long Shirt",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2023-06-29T16:34:17.452Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "Shirt short",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2023-06-29T16:35:20.610Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "Shirt shine",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2023-06-29T16:36:13.089Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "Shirt Sh",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2023-06-29T16:36:56.304Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "8",
+    "object_repr": "Shirt zDE",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2023-06-29T16:37:50.882Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "9",
+    "object_repr": "Shirt Shirt",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2023-06-29T16:39:33.620Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "10",
+    "object_repr": "Handbag",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2023-06-29T16:41:52.450Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "11",
+    "object_repr": "Shoe",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2023-06-29T16:42:16.628Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "12",
+    "object_repr": "Shoe nike",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2023-06-29T16:43:08.907Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "13",
+    "object_repr": "Lip glose",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2023-06-29T16:45:55.002Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Electronics",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2023-06-29T16:46:17.053Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "14",
+    "object_repr": "AirPod",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+}
+]

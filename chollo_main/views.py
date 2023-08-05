@@ -1,10 +1,12 @@
 import random
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank
 from django.shortcuts import render, get_object_or_404
 from chollo_cart.forms import CartAddProductForm
 from .models import Category, Product, Profile
-from . forms import LoginForm, UserRegistrationForm, UserEditForm, ProfileEditForm
+from .forms import LoginForm, UserRegistrationForm, UserEditForm, ProfileEditForm, SearchForm
+
 
 # Create your views here.
 
@@ -58,9 +60,9 @@ def dashboard(request):
     return render(request, 'registration/login.html',
                   {'section': 'dashboard'})
 
-
-def cart_details(request):
-    return render(request, "chollo_main/cart-details.html")
+#
+# def cart_details(request):
+#     return render(request, "chollo_main/cart-details.html")
 
 
 def register(request):
@@ -105,4 +107,23 @@ def edit(request):
 
         return render(request, 'chollo_main/edit.html',
                       {'user_form': user_form, 'profile_form': profile_form})
+
+
+def item_search(request):
+    form = SearchForm()
+    query = None
+    results = []
+
+    if 'query' in request.GET:
+        form = SearchForm(request.GET)
+        if form.is_valid():
+            query = form.cleaned_data['query']
+            search_vector = SearchVector('name', weight='A') + SearchVector('description', weight='B',  config='spanish')
+            search_query = SearchQuery(query, config='spanish')
+            products = Product.objects.annotate(
+                search=search_vector,
+                rank=SearchRank(search_vector, search_query)).filter(rank__gte=0.3).order_by('-rank')
+            results = products
+    return render(request, 'chollo_main/search.html',
+                  {'form': form, 'query': query, 'results': results})
 

@@ -16,4 +16,4 @@ app.autodiscover_tasks()
 # celery -A chollosite worker --loglevel=info ....use this
 
 
-# At some point the cart doesnt show the actual number of items
+# At some point the cart doesn't show the actual number of items

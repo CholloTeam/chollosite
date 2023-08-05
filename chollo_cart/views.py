@@ -1,6 +1,8 @@
+from django.conf import settings
+from django.contrib.auth import user_logged_out
+from django.dispatch import receiver
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views.decorators.http import require_POST
-
 from chollo_cart.chollo_cart import Cart
 from chollo_cart.forms import CartAddProductForm
 from chollo_main.models import Product
@@ -38,4 +40,3 @@ def cart_detail(request):
             'override': True
         })
     return render(request, 'chollo_main/cart-details.html', {'cart': cart})
-

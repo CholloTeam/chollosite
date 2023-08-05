@@ -34,10 +34,10 @@ class Cart:
             self.chollo_cart[product_id]['quantity'] += quantity
 
         self.save()
+
     def save(self):
         # mark the session as "modified" to make sure it gets saved
         self.session.modified = True
-
 
     def remove(self, product):
         """
@@ -80,12 +80,12 @@ class Cart:
         :return:
         """
 
-        ##### CHECK ON THIS PLEASE!! ENSURE THERE"S A REASON WHY IT"S NOT DECIMAL
-
         return sum(Decimal(item['price']) * Decimal(item['quantity']) for item in self.chollo_cart.values())
 
     def clear(self):
         # Remove cart from session
         del self.session[settings.CART_SESSION_ID]
         self.save()
+
+
 

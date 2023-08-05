@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
+    'django.contrib.postgres'
 ]
 
 MIDDLEWARE = [
@@ -80,11 +81,12 @@ WSGI_APPLICATION = 'chollosite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'samuel',
+        'USER': 'samuel',
+        'PASSWORD': 'Samuel101',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -108,6 +110,8 @@ MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 CART_SESSION_ID = 'cart'
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
@@ -152,3 +156,13 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'chollo_main.authentication.EmailAuthBackend',
 ]
+
+
+
+#
+# # Remember to first create a new user as the password for progress you have is for the posgres.
+# SO you create a new user and make sure you properly grant it prriviledges of super.
+# Then make sure that you also convert the resulting dumped db to utf-8 with notepad.
+
+# python -Xutf8 manage.py dumpdata --exclude auth.permission --exclude contenttypes > database.json
+# python manage.py loaddata database.json
