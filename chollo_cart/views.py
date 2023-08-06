@@ -1,5 +1,4 @@
-from django.conf import settings
-from django.contrib.auth import user_logged_out
+from django.contrib.auth import user_logged_out, user_logged_in
 from django.dispatch import receiver
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views.decorators.http import require_POST
@@ -40,3 +39,20 @@ def cart_detail(request):
             'override': True
         })
     return render(request, 'chollo_main/cart-details.html', {'cart': cart})
+
+#
+# @receiver(user_logged_in)
+# def sync_cart_on_login(user, request):
+#     cart = Cart(request.user)
+#     for item in cart:
+#         product = item['product']
+#         quantity = item['quantity']
+#         request.session['cart'][str(product.id)] = {
+#             'quantity': quantity,
+#             'price': str(product.price),
+#         }
+#
+#
+# @receiver(user_logged_out)
+# def persist_cart_on_logout(user, request):
+#     del request.session['cart']
