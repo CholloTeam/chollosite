@@ -8,8 +8,9 @@ from .models import Category, Product, Profile
 from .forms import LoginForm, UserRegistrationForm, UserEditForm, ProfileEditForm, SearchForm
 
 
-# Create your views here.
+Create your views here.
 
+# hello I'm testing
 
 def home(request):
     categories = list(Category.objects.all())
