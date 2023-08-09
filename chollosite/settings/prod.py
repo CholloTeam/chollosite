@@ -2,6 +2,7 @@ import os
 
 from django.conf.global_settings import CACHES
 
+
 from .base import *
 
 DEBUG = False
@@ -10,8 +11,7 @@ ADMINS = [
     ('samuel', 'samuelosondu99@gmail.com'),
 ]
 
-ALLOWED_HOSTS = ['*']
-
+ALLOWED_HOSTS = ['chollositeproject.com', 'www.chollositeproject.com']
 DATABASES = {
     'default': {
     'ENGINE': 'django.db.backends.postgresql',
@@ -29,3 +29,7 @@ REDIS_URL = 'redis://cache:6379'
 CACHES['default']['LOCATION'] = REDIS_URL
 CHANNEL_LAYERS['default']['CONFIG']['hosts'] = [REDIS_URL]
 
+
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = True
