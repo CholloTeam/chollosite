@@ -14,7 +14,7 @@ services:
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_PASSWORD=samuel101
 
   web:
     build: .
@@ -27,7 +27,7 @@ services:
       - DJANGO_SETTINGS_MODULE=chollosite.settings.prod
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_PASSWORD=samuel101
     depends_on:
       - db
       - cache
@@ -45,7 +45,7 @@ services:
       - DJANGO_SETTINGS_MODULE=chollosite.settings.prod
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_PASSWORD=samuel101
     depends_on:
       - db
       - cache
@@ -59,4 +59,3 @@ services:
     ports:
       - "80:80"
       - "443:443"
-        
