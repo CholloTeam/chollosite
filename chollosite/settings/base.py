@@ -21,12 +21,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-w&pnf46e2xgb)f*ua7_c76rs^a2-@7a6bqqyryh&k$msijy=ck'
+SECRET_KEY = 'pex0v$*b!kjl-bk2p%1y8rf!&jh+bqa!9t5e4@xnac-(nbi2wc'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -41,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
-    'django.contrib.postgres'
+    'django.contrib.postgres',
     'channels',
 ]
 
@@ -76,19 +73,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'chollosite.wsgi.application'
+ASGI_APPLICATION = 'chollosite.asgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'samuel',
-        'USER': 'samuel',
-        'PASSWORD': 'Samuel101',
-    }
-}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -114,6 +100,22 @@ MEDIA_ROOT = BASE_DIR / 'media'
 CART_SESSION_ID = 'cart'
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            'hosts': [('127.0.0.1', 6379)],
+        },
+    },
+}
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.redis.RedisCache',
+        'LOCATION': 'redis://127.0.0.1:6379',
+    }
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
@@ -160,6 +162,10 @@ AUTHENTICATION_BACKENDS = [
     'chollo_main.authentication.EmailAuthBackend',
 ]
 
+
+
+
+
 # python manage.py runserver --settings=chollosite.settings.local
 
 #
@@ -169,3 +175,4 @@ AUTHENTICATION_BACKENDS = [
 
 # python -Xutf8 manage.py dumpdata --exclude auth.permission --exclude contenttypes > database.json
 # python manage.py loaddata database.json
+

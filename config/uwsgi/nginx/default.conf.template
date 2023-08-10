@@ -5,19 +5,19 @@ upstream uwsgi_app {
 
 # upstream for Daphne
    upstream daphne {
-       server unix:/code/educa/daphne.sock;
+       server unix:/code/chollosite/daphne.sock;
 }
 
 server {
     listen       80;
-    server_name www.educaproject.com educaproject.com;
+    server_name www.chollositeproject.com chollositeproject.com;
     return 301 https://$host$request_uri;
 }
 
 server{
     listen       443 ssl;
-    ssl_certificate   /code/chollosite/ssl/educa.crt;
-    ssl_certificate   /code/chollosite/ssl/educa.key;
+    ssl_certificate   /code/chollosite/ssl/chollosite.crt;
+    ssl_certificate   /code/chollosite/ssl/chollosite.key;
 
     server_name  www.chollositeproject.com chollositeproject.com;
     error_log

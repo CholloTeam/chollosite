@@ -5,9 +5,16 @@ DEBUG = True
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'samuel',
-        'USER': 'samuel',
+        'NAME': 'samuelosondu',
+        'USER': 'samuelosondu',
         'PASSWORD': 'Samuel101',
     }
 }
 
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
